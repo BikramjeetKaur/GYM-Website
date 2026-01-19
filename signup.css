@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("img/abstract-blur-fitness-gym-room.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 85%;
+  max-width: 1100px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+/* Left Image Section */
+.box1 {
+  flex: 1;
+  background-image: url("img/full-shot-sporty-woman-with-dumbbells.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Right Form Section */
+.box2 {
+  flex: 1;
+  padding: 5vh 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box2 h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box2 input {
+  height: 45px;
+  width: 100%;
+  max-width: 350px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.box2 input:focus {
+  border-color: #2e8b57;
+  box-shadow: 0 0 5px #2e8b57;
+}
+
+.box2 button {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.box2 button:hover {
+  background-color: #256b46;
+}
+
+.box2 p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.box2 a {
+  color: #2e8b57;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.box2 a:hover {
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .box1 {
+    height: 300px;
+  }
+
+  .box2 {
+    padding: 5vh 8vw;
+  }
+
+  .box2 input,
+  .box2 button {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .container {
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .box1 {
+    display: none;
+  }
+
+  .box2 {
+    padding: 6vh 6vw;
+  }
+
+  .box2 h1 {
+    font-size: 1.8rem;
+  }
+}

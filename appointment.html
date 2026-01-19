@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Fitness Blender</title>
+  <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+  <section class="appointment-section">
+    <div class="appointment-container">
+      
+      <!-- Left Side Image -->
+      <div class="appointment-image"></div>
+
+      <!-- Right Side Form -->
+      <div class="appointment-form">
+        <h1>Book Your Appointment</h1>
+        <p>Fill out the form below to schedule your personalized training, diet, or health consultation with our expert team.</p>
+        
+        <form action="thankyou.html" method="post">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Select Service</label>
+            <select id="service" name="service" required>
+              <option value="">-- Select a Service --</option>
+              <option value="gym">Gym Training</option>
+              <option value="diet">Diet Consultation</option>
+              <option value="health">Health & Wellness</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Notes</label>
+            <textarea id="message" name="message" rows="4" placeholder="Mention any specific goals or questions..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Confirm Appointment</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

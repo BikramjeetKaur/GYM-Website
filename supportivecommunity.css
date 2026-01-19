@@ -1,0 +1,157 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  /* background-color: #000; */
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header Section */
+.container {
+  text-align: center;
+  padding: 12vh 5vw;
+  background-color: white;
+}
+
+.heading {
+  color: #00aaff;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  /* border-bottom: 2px solid rgb(131, 108, 79); */
+  display: inline-block;
+  margin-bottom: 5vh;
+}
+
+.container p {
+  text-align: center;
+  font-size: 1.3rem;
+  /* color: #f2f2f2; */
+  color: black;
+  line-height: 1.8;
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4vw;
+  padding: 6vh 5vw;
+  background-color: white;
+}
+
+.card {
+  width: 30%;
+  background-color: #111;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Motivation Section */
+.motivation {
+  background: linear-gradient(135deg, #111, #222);
+  padding: 10vh 5vw;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.motivation-content h2 {
+  font-size: 2.4rem;
+  color: #00aaff;
+  margin-bottom: 30px;
+}
+
+.motivation-content ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.motivation-content li {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  margin: 12px 0;
+}
+
+.motivation-content p {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+.appointment-btn {
+  background-color: #00aaff;
+  color: black;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.appointment-btn:hover {
+  background-color: #4ba0ca;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .card {
+    width: 45%;
+  }
+
+  .heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .container p {
+    font-size: 1.1rem;
+  }
+
+  .motivation-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .motivation-content li {
+    font-size: 1rem;
+  }
+}

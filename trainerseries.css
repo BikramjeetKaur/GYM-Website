@@ -1,0 +1,176 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  padding: 50px 20px 30px;
+  background-color: #f5f5f5;
+  margin-top: 20px;
+}
+
+.section-header h1 {
+  font-size: 3rem;
+  color: #1a252f;
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Team Cards Row */
+.team-cards-row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Individual Card */
+.team-cards {
+  background-color: #fff;
+  width: 30%;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-cards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Card Image */
+.team-card-img {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card Text */
+.team-card-text {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-card-text h3 {
+  color: #1a252f;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.team-card-text p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Card Images */
+.img1 { background-image: url('img/beautiful-sports-couple-is-engaged-gym.jpg'); }
+.img2 { background-image: url('img/girl-athlete-keeps-disc-from-bar-weighting-agent-doing-crossfit-fitness-concept-sports-equipment-weight-loss.jpg'); }
+.img3 { 
+  background-image: url('/img/young-man-training-gym-bodybuilding.jpg'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.img4 { 
+  background-image: url('/img/cropped-view-slim-sporty-woman-measuring-waist.jpg'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.img5 { 
+  background-image: url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.img6 { 
+  background-image: url('/img/afm_nasm_opt_1.jpeg'); 
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .team-cards {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-cards {
+    width: 100%;
+  }
+
+  .section-header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* Appointment Section */
+.appointment-section {
+  background-color: grey;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.appointment-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.appointment-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.appointment-btn {
+  display: inline-block;
+  background-color: #00aaff;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.appointment-btn:hover {
+  background-color: #0088cc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .appointment-section h2 {
+    font-size: 2rem;
+  }
+
+  .appointment-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}

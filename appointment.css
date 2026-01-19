@@ -1,0 +1,126 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+  
+}
+
+/* Appointment Section */
+.appointment-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  background-image: url('/img/abstract-blur-fitness-gym-room.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.appointment-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Left Side Image */
+.appointment-image {
+  flex: 1;
+  background-image: url('/img/afm_nasm_opt_1.jpeg');
+  background-size: cover;
+  background-position: center;
+  min-height: 550px;
+}
+
+/* Right Side Form */
+.appointment-form {
+  flex: 1;
+  padding: 50px;
+}
+
+.appointment-form h1 {
+  font-size: 2rem;
+  color: #1a252f;
+  margin-bottom: 15px;
+}
+
+.appointment-form p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1a73e8;
+}
+
+/* Submit Button */
+.submit-btn {
+  display: inline-block;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #155cb0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .appointment-container {
+    flex-direction: column;
+  }
+
+  .appointment-image {
+    height: 300px;
+  }
+
+  .appointment-form {
+    padding: 30px;
+  }
+}
