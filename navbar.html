@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <style>
+    /* ===== Basic Navbar Setup ===== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      list-style: none;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+       background-color: #1a252f;
+      color: white;
+      padding: 15px 60px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo h2 {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    /* ===== Nav Links ===== */
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    /* ===== Buttons ===== */
+    .nav-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .nav-buttons button {
+      border: none;
+      padding: 8px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .login-btn {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+      padding: 5px;
+    }
+
+    .signup-btn {
+      background: white;
+      color: black;
+      padding: 5px
+    }
+
+    .login-btn:hover {
+      background: #00aaff;
+      color: white;
+      border: none;
+    }
+
+    .signup-btn:hover {
+      background: #00aaff;
+      color: white;
+      border: none;
+    }
+
+    /* ===== Hamburger Menu ===== */
+    .menu-btn {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .menu-btn span {
+      height: 3px;
+      width: 28px;
+      background: white;
+      border-radius: 3px;
+      transition: 0.3s ease;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    /* ===== Responsive Layout ===== */
+    @media (max-width: 992px) {
+      .navbar {
+        padding: 15px 20px;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        background: #111;
+        flex-direction: column;
+        width: 240px;
+        height: 100vh;
+        text-align: left;
+        transition: right 0.4s ease;
+        padding: 40px 25px;
+        gap: 18px;
+        overflow-y: auto;
+      }
+
+      .nav-links a {
+        font-size: 1rem;
+      }
+
+      /* Show menu when toggled */
+      #menu-toggle:checked ~ .nav-links {
+        right: 0;
+      }
+
+      /* Add buttons inside the menu */
+      .nav-links .mobile-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      .nav-links .mobile-buttons button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 0;
+      }
+
+      .menu-btn {
+        display: flex;
+      }
+
+      .nav-buttons {
+        display: none;
+      }
+    }
+
+    /* Hover animation for menu icon */
+    .menu-btn:hover span {
+      background: white;
+    }
+
+    /* Dropdown Styling */
+.nav-links li {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a252f;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  z-index: 1000;
+  border-radius: 5px;
+  flex-direction: column;
+  padding: 10px 0;
+  list-style: none;
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content li a {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #111;
+}
+
+.nav-links li.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <h2>FITNESS<span style="color: #00aaff;">blender</span></h2>
+    </div>
+
+    <!-- Hamburger Toggle -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Menu Items -->
+    <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="membership.html">Membership</a></li>
+    
+    <!-- Programs Dropdown -->
+    <li class="dropdown">
+        <a href="#">Programs &#9662;</a>
+        <ul class="dropdown-content">
+        <li><a href="trainerseries.html">Trainer Series</a></li>
+        <li><a href="supportivecommunity.html">Supportive Community</a></li>
+        </ul>
+    </li>
+
+    <li><a href="healthy2.html">Healthy Living</a></li>
+
+    <!-- Mobile Buttons -->
+    <div class="mobile-buttons">
+        <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+        <button class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+    </ul>
+
+
+    
+  </nav>
+
+  
+</body>
+</html>
